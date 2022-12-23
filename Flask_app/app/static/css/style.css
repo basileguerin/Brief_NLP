@@ -1,5 +1,6 @@
 body {
-    background-image: url('../images/v748-toon-111.jpg')
+    background-image: url('../images/background.jpg');
+    background-size:cover;
 }
 
 h1 {
