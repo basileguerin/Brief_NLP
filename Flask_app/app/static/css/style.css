@@ -1,4 +1,28 @@
-/*
-    classe = . 
-    id = #
-*/
+body {
+    background-image: url('../images/v748-toon-111.jpg')
+}
+
+h1 {
+    text-align: center;
+    color: goldenrod;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    font-style: italic;
+}
+
+#form{
+    margin-left: 10px;
+}
+
+#bas {
+    font-size: 14px;
+    font-style: italic;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border: 2px;
+}

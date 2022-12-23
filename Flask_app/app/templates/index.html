@@ -16,15 +16,29 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css' ) }}">
     </head>
     <body>
-        <h1 class="info">Prediction ressenti de l'avis d'un film via NLP</h1>
+        <h1 class="info">Prédiction ressenti de l'avis d'un film via NLP</h1>
 
-        <form action="" method="post">
-            <label for="comment">Entrez un commentaire :</label><br>
-            <textarea id="textarea" name="textarea" rows="4" cols="100"></textarea><br>
-            <input type="submit" value="Submit">
-        </form>
-        
-        {{pred}}
+        <p>L'application détermine si un commentaire est positif ou négatif en utilisant un modèle de machine learning entraîné en amont</p>
+
+        <br>
+
+        <div id="form">
+            <form action="" method="post">
+                <label for="comment">Entrez un commentaire :</label><br>
+                <textarea id="textarea" name="textarea" rows="4" cols="100"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+            
+            {{pred}}
+
+            {% if pred == 'Commentaire positif' %}
+                <span> 👍 </span>
+            {% else %} 
+                <span> 👎 </span>
+            {% endif %}
+        </div>
+
+        <div id="bas">Basile GUERIN / Johann JOURNAUX</div>
         
         <!-- import bootstrap pour le js -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
